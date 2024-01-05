@@ -2,9 +2,9 @@
 seeds = false
 skip-lint = false
 [programs.localnet]
-sol_chess = "9PsU5ntn26Bos8FRtwupQbvoYbchzt8bdQoxLym7AHWB"
+sol_ships = "3LpWPnenZXSAQ7szRBE5tmWpdxKCNsD9pCerQWV5ZM2r"
 [programs.devnet]
-sol_chess = "9PsU5ntn26Bos8FRtwupQbvoYbchzt8bdQoxLym7AHWB"
+sol_ships = "3LpWPnenZXSAQ7szRBE5tmWpdxKCNsD9pCerQWV5ZM2r"
 
 [registry]
 url = "https://api.apr.dev"

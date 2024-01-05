@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-sol-chess = { path = "../programs/sol-chess", features = ["no-entrypoint"], version = "0.1.0" }
+sol-chess = { path = "../programs/sol-ships", features = ["no-entrypoint"], version = "0.1.0" }
 anchor-lang = "0.26.0"
 anchor-spl = "0.26.0"
 solana-sdk = "1.10.29"

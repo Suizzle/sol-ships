@@ -4,16 +4,16 @@ pub fn join_game(
     client: &Client,
     user: Pubkey,
     game: Pubkey,
-    color: sol_chess::Color,
+    color: sol_ships::Color,
 ) -> ClientResult<()> {
     let join_game_ix = Instruction {
-        program_id: sol_chess::ID,
+        program_id: sol_ships::ID,
         accounts: vec![
             AccountMeta::new(client.payer_pubkey(), true),
             AccountMeta::new(user, false),
             AccountMeta::new(game, false),
         ],
-        data: sol_chess::instruction::JoinGame { color }.data(),
+        data: sol_ships::instruction::JoinGame { color }.data(),
     };
 
     send_and_confirm_tx(

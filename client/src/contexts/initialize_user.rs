@@ -2,13 +2,13 @@ use crate::*;
 
 pub fn initialize_user(client: &Client, user: Pubkey) -> ClientResult<()> {
     let initiallize_user_ix = Instruction {
-        program_id: sol_chess::ID,
+        program_id: sol_ships::ID,
         accounts: vec![
             AccountMeta::new(client.payer_pubkey(), true),
             AccountMeta::new(user, false),
             AccountMeta::new_readonly(system_program::ID, false),
         ],
-        data: sol_chess::instruction::InitializeUser {}.data(),
+        data: sol_ships::instruction::InitializeUser {}.data(),
     };
 
     send_and_confirm_tx(

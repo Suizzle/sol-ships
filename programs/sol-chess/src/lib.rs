@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use anchor_lang::solana_program::instruction::Instruction;
 use std::mem::size_of;
 
-declare_id!("9PsU5ntn26Bos8FRtwupQbvoYbchzt8bdQoxLym7AHWB");
+declare_id!("3LpWPnenZXSAQ7szRBE5tmWpdxKCNsD9pCerQWV5ZM2r");
 
 pub mod contexts;
 pub mod error;
@@ -15,7 +15,7 @@ pub use models::*;
 pub use states::*;
 
 #[program]
-pub mod sol_chess {
+pub mod sol_ships {
     use super::*;
 
     pub fn initialize_user(ctx: Context<InitializeUser>) -> Result<()> {

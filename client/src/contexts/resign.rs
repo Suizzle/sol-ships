@@ -7,14 +7,14 @@ pub fn resign(
     game: Pubkey,
 ) -> ClientResult<()> {
     let resign_ix = Instruction {
-        program_id: sol_chess::ID,
+        program_id: sol_ships::ID,
         accounts: vec![
             AccountMeta::new(client.payer_pubkey(), true),
             AccountMeta::new(user, false),
             AccountMeta::new(adversary_user, false),
             AccountMeta::new(game, false),
         ],
-        data: sol_chess::instruction::Resign {}.data(),
+        data: sol_ships::instruction::Resign {}.data(),
     };
 
     send_and_confirm_tx(&client, [resign_ix].to_vec(), None, "resign".to_string())?;

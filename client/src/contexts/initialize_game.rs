@@ -10,7 +10,7 @@ pub fn initialize_game(
     is_rated: bool,
 ) -> ClientResult<()> {
     let initiallize_game_ix = Instruction {
-        program_id: sol_chess::ID,
+        program_id: sol_ships::ID,
         accounts: vec![
             AccountMeta::new(client.payer_pubkey(), true),
             AccountMeta::new(user, false),
@@ -18,8 +18,8 @@ pub fn initialize_game(
             AccountMeta::new_readonly(system_program::ID, false),
             AccountMeta::new_readonly(clock::ID, false),
         ],
-        data: sol_chess::instruction::InitializeGame {
-            game_config: sol_chess::GameConfig {
+        data: sol_ships::instruction::InitializeGame {
+            game_config: sol_ships::GameConfig {
                 wager,
                 timer,
                 increment,
